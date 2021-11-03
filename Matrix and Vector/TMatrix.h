@@ -84,16 +84,5 @@ TMatrix<ValType> TMatrix<ValType>::operator-(const TMatrix<ValType>& mt)
 template<class ValType>
 TMatrix<ValType> TMatrix<ValType>::operator*(const TMatrix<ValType>& mt)
 {
-	TMatrix<ValType> tmp = TMatrix<ValType>(*this);
-	ValType NUll = tmp[0][0] - tmp[0][0];
-	for (size_t i = 0; i < this->Size; i++) {
-		for (size_t j = 0; j < this->Size - i; j++) {
-			tmp[i][j] = NUll;
-			for (size_t k = 0; k <= j ; k ++) {
-				tmp[i][j] = (tmp[i][j]) + ((*this)[i][k] * mt[k + i][j - k]);
-			}
-		}
-	}
-
-	return tmp;
+	//самому сказали писать
 }
